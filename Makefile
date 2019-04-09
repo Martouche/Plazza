@@ -7,14 +7,15 @@
 
 NAME		=	plazza
 
-SRCS		=	./src/plazza.cpp
+SRCS		=	src/plazza.cpp	\
+				src/main.cpp
 
 OBJS		=	$(SRCS:.c=.o)
 INCL		=	-I./include
 
 ####################################################
 
-CC			=	gcc
+CC			=	g++
 RM			=	rm -f
 CFLAGS		=   -W -Wall -Wextra
 
