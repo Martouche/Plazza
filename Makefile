@@ -10,7 +10,7 @@ NAME		=	plazza
 SRCS		=	src/plazza.cpp	\
 				src/main.cpp
 
-OBJS		=	$(SRCS:.c=.o)
+OBJS		=	$(SRCS:.cpp=.o)
 INCL		=	-I./include
 
 ####################################################

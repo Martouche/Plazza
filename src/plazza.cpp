@@ -18,10 +18,10 @@ Plazza::~Plazza() // Destructeur
 
 void Plazza::shell(int multiplier, int number, int time)
 {
-    printf("plazza> ");
-    fflush(stdout);
-
-    while (getline(std::cin, this->input)) {
+    while (42) {
+        printf("plazza> ");
+        fflush(stdout);
+        getline(std::cin, this->input);
         std::cout << this->input << std::endl;
     }
 }
