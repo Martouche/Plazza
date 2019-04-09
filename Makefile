@@ -9,7 +9,7 @@ NAME		=	plazza
 
 SRCS		=	./src/plazza.cpp
 
-OBJS		=	$(CLIENT_SRCS:.c=.o)
+OBJS		=	$(SRCS:.c=.o)
 INCL		=	-I./include
 
 ####################################################
