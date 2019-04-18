@@ -8,7 +8,8 @@
 NAME		=	plazza
 
 SRCS		=	./src/plazza.cpp    \
-                ./src/reception.cpp
+                ./src/reception.cpp \
+                ./src/kitchen.cpp
 
 OBJS		=	$(SRCS:.cpp=.o)
 INCL		=	-I./include
