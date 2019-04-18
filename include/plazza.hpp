@@ -20,6 +20,7 @@ public:
     ~Recept();
     void loop();
 private:
+    std::string input;
 };
 
 

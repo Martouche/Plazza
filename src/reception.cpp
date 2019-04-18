@@ -9,6 +9,7 @@
 
 Recept::Recept()
 {
+    this->input = "";
 }
 
 Recept::~Recept()
@@ -18,4 +19,11 @@ Recept::~Recept()
 void Recept::loop()
 {
     std::cout << "Welcome to loop" << std::endl;
+
+    while (42) {
+        printf("plazza> ");
+        fflush(stdout);
+        getline(std::cin, this->input);
+        std::cout << this->input << std::endl;
+    }
 }
