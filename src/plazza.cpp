@@ -7,7 +7,7 @@
 
 #include "../include/plazza.hpp"
 
-Plazza::Plazza() // Constructeur
+/*Plazza::Plazza() // Constructeur
 {
 }
 
@@ -23,13 +23,16 @@ void Plazza::shell(int multiplier, int number, int time)
     while (42) {
         std::cout << this->input << std::endl;
     }
-}
+}*/
 
 int main(int ac, char **av)
 {
-    if (ac == 3)
-        Plazza *plazza = new shell(atoi(av[1]), atoi(av[2]), atoi(av[3]));
-    else
+    if (ac == 4) {
+        Recept *reception = new Recept;
+        reception->loop();
+        //Plazza *plazza = new Plazza;
+        //plazza->shell(atoi(av[1]), atoi(av[2]), atoi(av[3]))
+    } else
         return (84);
     return (0);
 }

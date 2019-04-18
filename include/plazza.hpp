@@ -13,7 +13,17 @@
 #include <string>
 #include <iostream>
 
-class Plazza
+class Recept
+{
+public:
+    Recept();
+    ~Recept();
+    void loop();
+private:
+};
+
+
+/*class Plazza
 {
     public:
         Plazza();
@@ -39,7 +49,7 @@ class Plazza
 
     private:
         std::string input;
-};
+};*/
 
 
 #endif

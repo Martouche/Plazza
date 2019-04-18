@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <string.h>
-#include <pthread.h>
-#include <stdlib.h>
-#include <unistd.h>
+#include "my.hpp"
 
 pthread_t tid[2];
 int counter;
@@ -10,7 +6,7 @@ pthread_mutex_t lock;
 
 void *incrementCounter(void *arg)
 {
-    //pthread_mutex_lock(&lock);
+    pthread_mutex_lock(&lock);
     int *i = (int *)arg;
     int j = 0;
     counter += 1;
@@ -20,7 +16,7 @@ void *incrementCounter(void *arg)
         *i += 1;
     }
     printf("Job %d has finished\n", counter);
-    //pthread_mutex_unlock(&lock);
+    pthread_mutex_unlock(&lock);
     return NULL;
 }
 
