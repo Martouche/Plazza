@@ -7,8 +7,13 @@
 
 NAME		=	plazza
 
+<<<<<<< HEAD
 SRCS		=	./src/plazza.cpp    \
                 ./src/reception.cpp
+=======
+SRCS		=	src/plazza.cpp	\
+				src/main.cpp
+>>>>>>> 53c72d525e179d19914c5a3154a72eecf2b11958
 
 OBJS		=	$(SRCS:.cpp=.o)
 INCL		=	-I./include

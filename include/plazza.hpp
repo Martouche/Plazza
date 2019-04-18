@@ -26,7 +26,7 @@ private:
 /*class Plazza
 {
     public:
-        Plazza();
+        Plazza(int, int, int);
         ~Plazza();
         void shell(int, int, int);
         
