@@ -16,7 +16,7 @@ Recept::~Recept()
 {
 }
 
-void Recept::loop()
+void Recept::loop(int cook)
 {
     std::cout << "Welcome to loop" << std::endl;
 
@@ -25,5 +25,6 @@ void Recept::loop()
         fflush(stdout);
         getline(std::cin, this->input);
         std::cout << this->input << std::endl;
+        create_kitchen(cook);
     }
 }

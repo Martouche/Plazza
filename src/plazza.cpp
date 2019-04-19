@@ -26,7 +26,7 @@ int main(int ac, char **av)
 {
     if (ac == 4) {
         Recept *reception = new Recept;
-        reception->loop();
+        reception->loop(atoi(av[2]));
         //Plazza *plazza = new Plazza;
         //plazza->shell(atoi(av[1]), atoi(av[2]), atoi(av[3]))
     } else

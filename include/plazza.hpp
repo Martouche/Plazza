@@ -18,7 +18,8 @@ class Recept
 public:
     Recept();
     ~Recept();
-    void loop();
+    void loop(int);
+    void create_kitchen(int);
 private:
     std::string input;
 };
