@@ -5,15 +5,15 @@
 ## made by Martin Vantalon
 ##
 
-CC=     	gcc
+CC=     	g++
 
 NAME=		test
 
-SRC=		main.c
+SRC=		Plazza.c
 
 OBJ=            $(SRC:.c=.o)
 
-CFLAGS=         -lpthread -Wall -Wextra -g3
+CFLAGS=         -lpthread -Wall -Wextra -g3 -I./include
 
 all:            $(NAME)
 
@@ -25,4 +25,3 @@ fclean:         clean
 		rm -f $(NAME)
 
 re:         fclean all
-

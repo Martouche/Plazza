@@ -8,6 +8,7 @@
 NAME		=	plazza
 
 SRCS		=	./src/plazza.cpp    \
+		./src/threads.cpp\
                 ./src/reception.cpp \
                 ./src/kitchen.cpp   \
                 ./src/split_arg.cpp
@@ -24,7 +25,7 @@ CFLAGS		=   -W -Wall -Wextra
 	@printf " \033[34m[Compilation]\033[39m %s\n" $<
 
 all	:	$(OBJS)
-		@$(CC) $(OBJS) -o $(NAME)
+		@$(CC) $(OBJS) -o $(NAME) -lpthread
 		@printf "\n \033[33m[Message]\033[39m Server compilation done\n"
 
 clean	:
