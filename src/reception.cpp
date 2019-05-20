@@ -40,7 +40,7 @@ int check_command(std::string str)
     std::vector<std::string> argument = split_arg(str);
 
     if (argument[0].compare("status") == 0)
-        std::cout << "yes martin travaille connard" << std::endl;
+        std::cout << "hello" << std::endl;
     else if (argument[0].compare("Margaritana") == 0 || argument[0].compare("Regina") == 0)
         check_size(argument);
     else if (argument[0].compare("Americana") == 0 || argument[0].compare("Fantasia") == 0)
