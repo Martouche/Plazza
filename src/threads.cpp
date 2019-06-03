@@ -7,7 +7,7 @@
 
 #include "../include/threads.hpp"
 #include <pthread.h>
-#include <iostream>       // std::cout
+#include <iostream>
 #include <thread>
 
 Thread::Thread() : running(false)

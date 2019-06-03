@@ -7,13 +7,13 @@
 
 #include "../include/plazza.hpp"
 
-Recept::Recept()
+Recept::Plazza()
 {
     this->input = "";
     this->kitchen_number = 0;
 }
 
-Recept::~Recept()
+Recept::~Plazza()
 {
 }
 
@@ -50,7 +50,7 @@ int check_command(std::string str)
     return -1;
 }
 
-void Recept::loop(int cook)
+void Plazza::loop(int cook)
 {
     std::cout << "Welcome to loop" << std::endl;
 
