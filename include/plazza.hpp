@@ -36,10 +36,11 @@ enum PizzaSize
 class Plazza {
 public:
     Plazza(PizzaType type, PizzaSize size);
-    ~Plazza();
-
-    void loop(int);
-    void create_kitchen(int);
+    ~Plazza() = default;
+    PizzaType getType() const noexcept;
+    void setType(PizzaType type) noexcept;
+    PizzaSize getSize() const noexcept;
+    void setSize(PizzaSize size) noexcept;
 private:
     PizzaType type;
     PizzaSize size;
