@@ -19,7 +19,7 @@
 
 constexpr int MAX_KITCHENS = 100;
 
-struct Plazza {
+struct Plazzas {
     int status[MAX_KITCHENS][10];
     std::mutex mutex;
 };
@@ -34,18 +34,18 @@ struct OrderMsg {
     OrderPizza pizza;
 };
 
-class Thread
-{
+class Thread {
 public:
   Thread();
-  int launch(void *(*routine)(void *), void *);
-  bool is_running() const;
-  int waitThread();
   ~Thread();
-
+  int getMsqid() const noexcept;
+  void createSharedMemory();
 private:
-    pthread_t thread;
-    bool running;
+    Plazzas *_sharedMemory;
+    int _shmid;
+    int _msqid;
 };
+
+Plazzas *openSharedMemory();
 
 #endif

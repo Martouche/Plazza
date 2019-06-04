@@ -19,6 +19,7 @@
 #include <sys/msg.h>
 #include <vector>
 #include "../include/plazza.hpp"
+#include "../include/threads.hpp"
 
 class Reception {
 	public:
@@ -34,8 +35,8 @@ class Reception {
         void addOrder(std::string type, std::string size, int number);
 	private:
         std::vector<Plazza *> _orders;
-        SharedMemory *_shm;
-        Plazza *_sharedMemory;
+        Thread *_shm;
+        Plazzas *_sharedMemory;
         OrderMsg _sendBuffer;
         int _multiplier;
         int _numberOfCooks;
