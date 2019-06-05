@@ -18,8 +18,8 @@
 #include <sys/msg.h>
 #include <pthread.h>
 #include <signal.h>
-#include "threads.hpp"
-#include "Cook.hpp"
+#include "../include/threads.hpp"
+#include "../include/cook.hpp"
 
 struct ThreadParams {
     Cook *cook;

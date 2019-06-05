@@ -10,6 +10,7 @@ NAME		=	plazza
 SRCS= 		./src/plazza.cpp\
 		./src/threads.cpp\
 		./src/reception.cpp\
+		./src/kitchen.cpp\
                 ./src/split_arg.cpp
 
 OBJS		=	$(SRCS:.cpp=.o)

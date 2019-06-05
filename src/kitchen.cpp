@@ -8,6 +8,8 @@
 #include "../include/kitchen.hpp"
 #include "../include/error.hpp"
 
+bool isThreadAlive;
+
 Kitchen::Kitchen(int number, int multiplier, int numberOfCooks, int replaceTime)
 : _number(number), _multiplier(multiplier), _numberOfCooks(numberOfCooks), _replaceTime(replaceTime)
 {
@@ -80,7 +82,7 @@ void Kitchen::launchKitchen() noexcept
             lock.unlock();
             killTimer = std::chrono::steady_clock::now();
         }
-        if (msgrcv(_msqid, &_receiveBuffer, sizeof(Pizza), _number + 1, MSG_NOERROR | IPC_NOWAIT) > 0)
+        if (msgrcv(_msqid, &_receiveBuffer, sizeof(Plazza), _number + 1, MSG_NOERROR | IPC_NOWAIT) > 0)
             assignOrder();
     }
 }
@@ -93,7 +95,7 @@ void Kitchen::assignOrder() noexcept
             if (_sharedMemory->status[_number][0] > 0) {
                 std::cout << "Kitchen n°" << _number << " : " << "1 cook busy" << std::endl;
                 _sharedMemory->status[_number][0] -= 1;
-                Pizza *pizza = new Pizza(_receiveBuffer.pizza.type, _receiveBuffer.pizza.size);
+                Plazza *pizza = new Plazza(_receiveBuffer.pizza.type, _receiveBuffer.pizza.size);
                 _cooks[i]->setPizza(pizza);
                 _cooks[i]->setActiveOrder(true);
             }

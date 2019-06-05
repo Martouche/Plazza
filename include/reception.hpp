@@ -20,6 +20,8 @@
 #include <vector>
 #include "../include/plazza.hpp"
 #include "../include/threads.hpp"
+#include "../include/kitchen.hpp"
+#include "../include/error.hpp"
 
 class Reception {
 	public:
