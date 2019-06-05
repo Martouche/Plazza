@@ -5,7 +5,7 @@
 ** Reception file
 */
 
-#include "../include/plazza.hpp"
+#include "../include/kitchen.hpp"
 #include "../include/reception.hpp"
 #include "../include/error.hpp"
 #include "../include/threads.hpp"
